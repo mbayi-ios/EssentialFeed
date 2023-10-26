@@ -15,6 +15,7 @@
 		CDFEF4192AE7A2C400F959CE /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFEF4182AE7A2C400F959CE /* FeedLoader.swift */; };
 		CDFEF41C2AE7A88600F959CE /* RemoteFeedLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFEF41B2AE7A88600F959CE /* RemoteFeedLoaderTests.swift */; };
 		CDFEF41F2AE7BDD900F959CE /* RemoteFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFEF41E2AE7BDD900F959CE /* RemoteFeedLoader.swift */; };
+		CDFEF4212AEA728F00F959CE /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFEF4202AEA728F00F959CE /* HTTPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		CDFEF4182AE7A2C400F959CE /* FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
 		CDFEF41B2AE7A88600F959CE /* RemoteFeedLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoaderTests.swift; sourceTree = "<group>"; };
 		CDFEF41E2AE7BDD900F959CE /* RemoteFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoader.swift; sourceTree = "<group>"; };
+		CDFEF4202AEA728F00F959CE /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				CDFEF41E2AE7BDD900F959CE /* RemoteFeedLoader.swift */,
+				CDFEF4202AEA728F00F959CE /* HTTPClient.swift */,
 			);
 			path = "Feed API";
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDFEF41F2AE7BDD900F959CE /* RemoteFeedLoader.swift in Sources */,
+				CDFEF4212AEA728F00F959CE /* HTTPClient.swift in Sources */,
 				CDFEF4192AE7A2C400F959CE /* FeedLoader.swift in Sources */,
 				CDFEF4172AE7A21A00F959CE /* FeedItem.swift in Sources */,
 				CDFEF4012AE7A1F400F959CE /* EssentialFeed.docc in Sources */,
