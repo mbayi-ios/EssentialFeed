@@ -20,6 +20,7 @@ class LocalFeedLoader {
     func save(_ items: [FeedItem], completion: @escaping (Error?) -> Void) {
         store.deleteCachedFeed { [weak self] error in
             guard let self = self else { return }
+            
             if error == nil {
                 self.store.insert(items, timestamp: self.currentDate(), completion: completion)
             } else {
@@ -32,7 +33,7 @@ class LocalFeedLoader {
 protocol FeedStore {
     typealias DeletionCompletion = (Error?) -> Void
     typealias InsertionCompletion = (Error?) -> Void
-    
+
     func deleteCachedFeed(completion: @escaping DeletionCompletion)
     func insert(_ items: [FeedItem], timestamp: Date, completion: @escaping InsertionCompletion)
 }
@@ -109,10 +110,10 @@ class CacheFeedUseCaseTests: XCTestCase {
         var sut: LocalFeedLoader? = LocalFeedLoader(store: store, currentDate: Date.init)
         
         var receivedResults = [Error?]()
-        sut?.save([uniqueItem()]) { receivedResults.append($0)}
+        sut?.save([uniqueItem()]) { receivedResults.append($0) }
         
         sut = nil
-        store.completeInsertion(with: anyNSError())
+        store.completeDeletion(with: anyNSError())
         
         XCTAssertTrue(receivedResults.isEmpty)
     }
@@ -152,7 +153,7 @@ class CacheFeedUseCaseTests: XCTestCase {
         
         private var deletionCompletions = [DeletionCompletion]()
         private var insertionCompletions = [InsertionCompletion]()
-
+        
         func deleteCachedFeed(completion: @escaping DeletionCompletion) {
             deletionCompletions.append(completion)
             receivedMessages.append(.deleteCachedFeed)
