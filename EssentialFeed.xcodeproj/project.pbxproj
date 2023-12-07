@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CD1F911A2AEBAA9F003E425E /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1F91192AEBAA9F003E425E /* URLSessionHTTPClientTests.swift */; };
 		CD726D862B21EC5F0072DA51 /* LocalFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD726D852B21EC5F0072DA51 /* LocalFeedLoader.swift */; };
+		CD726D882B21ED3C0072DA51 /* FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD726D872B21ED3C0072DA51 /* FeedStore.swift */; };
 		CD98A4AD2B1F188F00255B5C /* CacheFeedUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD98A4AC2B1F188F00255B5C /* CacheFeedUseCaseTests.swift */; };
 		CDDB89C52AF0E81100527EDB /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDB89C42AF0E81100527EDB /* XCTestCase+MemoryLeakTracking.swift */; };
 		CDDB89C72AF11A0800527EDB /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDB89C62AF11A0800527EDB /* URLSessionHTTPClient.swift */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		CD1F91192AEBAA9F003E425E /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
 		CD726D852B21EC5F0072DA51 /* LocalFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedLoader.swift; sourceTree = "<group>"; };
+		CD726D872B21ED3C0072DA51 /* FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStore.swift; sourceTree = "<group>"; };
 		CD98A4AC2B1F188F00255B5C /* CacheFeedUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheFeedUseCaseTests.swift; sourceTree = "<group>"; };
 		CDDB89C42AF0E81100527EDB /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		CDDB89C62AF11A0800527EDB /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				CD726D852B21EC5F0072DA51 /* LocalFeedLoader.swift */,
+				CD726D872B21ED3C0072DA51 /* FeedStore.swift */,
 			);
 			path = "Feed Cache";
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD726D882B21ED3C0072DA51 /* FeedStore.swift in Sources */,
 				CDDB89C72AF11A0800527EDB /* URLSessionHTTPClient.swift in Sources */,
 				CDFEF41F2AE7BDD900F959CE /* RemoteFeedLoader.swift in Sources */,
 				CDFEF4212AEA728F00F959CE /* HTTPClient.swift in Sources */,
