@@ -86,8 +86,5 @@ class ValidateFeedCacheUseCaseTests: XCTestCase {
         trackForMemoryLeaks(sut, file: file, line: line)
         return (sut, store)
     }
-    
-   
-    
 }
 
