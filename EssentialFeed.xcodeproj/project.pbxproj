@@ -187,9 +187,9 @@
 		CDFEF3FE2AE7A1F400F959CE /* EssentialFeed */ = {
 			isa = PBXGroup;
 			children = (
-				CD726D842B21EC4B0072DA51 /* Feed Cache */,
 				CDFEF3FF2AE7A1F400F959CE /* EssentialFeed.h */,
 				CDFEF4002AE7A1F400F959CE /* EssentialFeed.docc */,
+				CD726D842B21EC4B0072DA51 /* Feed Cache */,
 				CDFEF41A2AE7A40900F959CE /* Feed Feature */,
 				CDFEF41D2AE7BD9900F959CE /* Feed API */,
 			);
