@@ -13,5 +13,7 @@ public enum HTTPClientResult {
 }
 
 public protocol HTTPClient {
+    /// The completion handler can be invovked in any thread
+    /// Clients are responsible to disptach to appropriate threads, if needed
     func get(from url: URL, completion: @escaping (HTTPClientResult) -> Void)
 }
