@@ -34,6 +34,7 @@ public class CodableFeedStore: FeedStore {
             return LocalFeedImage(id: id, description: description, location: location, url: url)
         }
     }
+    
     private let queue = DispatchQueue(label: "\(CodableFeedStore.self)Queue", qos: .userInitiated)
     private let storeURL: URL
     
@@ -77,8 +78,7 @@ public class CodableFeedStore: FeedStore {
         let storeURL = self.storeURL
         queue.async {
             guard FileManager.default.fileExists(atPath: storeURL.path) else {
-                
-                return  completion(nil)
+                return completion(nil)
             }
             
             do {
