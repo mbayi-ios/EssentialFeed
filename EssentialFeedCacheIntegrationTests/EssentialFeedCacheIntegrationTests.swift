@@ -8,9 +8,8 @@
 import XCTest
 import EssentialFeed
 
-final class EssentialFeedCacheIntegrationTests: XCTestCase {
-    
-    override func setUp()  {
+class EssentialFeedCacheIntegrationTests: XCTestCase {
+    override func setUp() {
         super.setUp()
         
         setupEmptyStoreState()
@@ -21,11 +20,11 @@ final class EssentialFeedCacheIntegrationTests: XCTestCase {
         
         undoStoreSideEffects()
     }
-
-    func test_load_deliversNoitemsOnEmptyCache() {
+    
+    func test_load_deliversNoItemsOnEmptyCache() {
         let sut = makeSUT()
-        
-        let exp = expectation(description: "waith for load completion")
+
+        let exp = expectation(description: "Wait for load completion")
         sut.load { result in
             switch result {
             case let .success(imageFeed):
@@ -37,7 +36,6 @@ final class EssentialFeedCacheIntegrationTests: XCTestCase {
             
             exp.fulfill()
         }
-        
         wait(for: [exp], timeout: 1.0)
     }
     
@@ -48,24 +46,24 @@ final class EssentialFeedCacheIntegrationTests: XCTestCase {
         
         let saveExp = expectation(description: "Wait for save completion")
         sutToPerformSave.save(feed) { saveError in
-            XCTAssertNil(saveError, "Expected to save feed successfully!")
+            XCTAssertNil(saveError, "Expected to save feed successfully")
             saveExp.fulfill()
         }
-        
         wait(for: [saveExp], timeout: 1.0)
         
-        let loadExp = expectation(description: "wait for load completion")
+        let loadExp = expectation(description: "Wait for load completion")
         sutToPerformLoad.load { loadResult in
             switch loadResult {
             case let .success(imageFeed):
                 XCTAssertEqual(imageFeed, feed)
                 
             case let .failure(error):
-                XCTFail("Expected successful feed result, got\(error) instead")
+                XCTFail("Expected successful feed result, got \(error) instead")
             }
             
             loadExp.fulfill()
         }
+        wait(for: [loadExp], timeout: 1.0)
     }
     
     // MARK: Helpers
@@ -77,7 +75,6 @@ final class EssentialFeedCacheIntegrationTests: XCTestCase {
         let sut = LocalFeedLoader(store: store, currentDate: Date.init)
         trackForMemoryLeaks(store, file: file, line: line)
         trackForMemoryLeaks(sut, file: file, line: line)
-        
         return sut
     }
     
