@@ -24,10 +24,25 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
+		<key>EssentialFeediOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>CD8288D32B6760EA0096FFC9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CDACF3672B7E21F000D4BB42</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CDACF3702B7E21F100D4BB42</key>
 		<dict>
 			<key>primary</key>
 			<true/>
